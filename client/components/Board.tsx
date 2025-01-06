@@ -19,7 +19,6 @@ export const Board = () => {
   const [tags, setTags] = useState<TagType[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeColumn, setActiveColumn] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,8 +33,6 @@ export const Board = () => {
       } catch (error) {
         toast.error("Error retrieving Items at this moment");
         console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
       }
     };
 
