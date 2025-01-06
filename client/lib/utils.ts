@@ -109,7 +109,6 @@ export const formatLogMessage = (log: HistoryLogEntry): string => {
 };
 
 export const formatDate = (dateStr: string): string => {
-  const date = new Date(dateStr);
   const today = new Date();
   const yesterday = new Date(today);
   yesterday.setDate(yesterday.getDate() - 1);
